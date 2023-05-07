@@ -26,3 +26,17 @@ const getBotReply = (msg) => {
 };
 
 // First movie choice given if user inputs yes
+if (level === 1) {
+  if (msg === "yes") {
+    level = 2;
+    branch = 1;
+    return "excellent choice matt, I would reccomend 2001 a space odyssey. would you like to watch it?";
+  }
+  if (msg === "no") {
+    level = 2;
+    branch = 3;
+    return "would you like to watch a documentary on ai research instead perhaps?";
+  }
+}
+
+// This is the output if the user has said yes to watching the first choice
